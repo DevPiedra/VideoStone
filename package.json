@@ -1,0 +1,25 @@
+{
+  "name": "videostone",
+  "version": "1.0.0",
+  "description": "Prueba Técnica, Creative Drive Latam 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevPiedra/VideoStone.git"
+  },
+  "keywords": [
+    "css3",
+    "boostrap4",
+    "jquery",
+    "javascript"
+  ],
+  "author": "Daniel Piedra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevPiedra/VideoStone/issues"
+  },
+  "homepage": "https://github.com/DevPiedra/VideoStone#readme"
+}
