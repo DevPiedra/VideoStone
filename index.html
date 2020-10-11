@@ -6,28 +6,108 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 
   <title>VideoStone</title>
 </head>
 <body>
 
 <!-- Navbar -->
-<!-- Image and text -->
+  <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
     VideoStone
   </a>
+  <!-- Clock -->
   <form id="clockdate">
     <div class="navbar-brand">
-      <script src="js/reloj.js" type="module" id="clock" style="display: flex;"></script>
+      <script src="js/clock.js" type="module" id="clock" style="display: flex;"></script>
     </div>
   </form>
 </nav>
 
+<!-- Main VideoPlayer / SearchBar -->
+<div class="main">
+  <div class="container-flex">
+    <div class="row d-flex bg-secondary flex-row p-3">
+
+      <!-- Search Bar -->
+      <div class="searchbar col-4 mt-3 align-top">
+        <nav class="navbar navbar-light bd-light">
+          <form class="form-inline-block">
+            <script src="js/search.js"></script>
+            <input id="query" type="text" placeholder="Search" aria-label="Search">
+            <button type="submit" id="search-button" disabled onclick="search()">Search</button>
+          </form>
+        </nav>
+      </div>
+
+
+      <!-- Video Player -->
+      <div class="videoplayer col-8 mt-3">
+        <div class="d-inline-flex p-2 border border-dark rounded">
+          
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="js/video-player" allowfullscreen></iframe>
+          </div>
+          <div class="controls">
+            <div>Video</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrousel/Recomendations -->
+      <div class="recomendations col-6 mt-3 justify-content-center">
+        <div>
+          <div class="card-deck">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Info Video.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Info Video.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Info Video.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a href="https://github.com/DevPiedra"> Daniel Piedra</a>
+</div>
+
 
   <!-- Optional JavaScript -->
-  <script src="js/reloj.js" defer></script>
+  <script src="https://www.gstatic.com/external_hosted/jquery2.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/clock.js" defer></script>
+  <script src="js/video-player.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
