@@ -1,3 +1,4 @@
+var key = [API_KEY]// Insertar la key administrada por Google APIs.
 //array of random search terms (made them code related)
 function searchYT() {
   var element = document.getElementById("iframeClass");
@@ -12,7 +13,7 @@ function searchYT() {
 }
 
 function searhInYoutube(val) {
-  const YOUTUBE_API_KEY = [KEY]; // Insertar la key administrada por Google APIs.
+  const YOUTUBE_API_KEY = key; 
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${val}&key=${YOUTUBE_API_KEY}`;
   //fetch function following the aforementioned process
   fetch(url)
@@ -28,7 +29,7 @@ function searhInYoutube(val) {
     });
 }
 function resultsLoop(val) {
-  const YOUTUBE_API_KEY = "AIzaSyC5js03FOVxdvnjuaRr998heKqtxiLX7a0";
+  const YOUTUBE_API_KEY = key;
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${val}&key=${YOUTUBE_API_KEY}`;
   //fetch function following the aforementioned process
   fetch(url)
