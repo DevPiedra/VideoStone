@@ -1,5 +1,5 @@
 var key = [API_KEY]// Insertar la key administrada por Google APIs.
-//array of random search terms (made them code related)
+
 function searchYT() {
   var element = document.getElementById("iframeClass");
   console.log(element);
